@@ -30,6 +30,14 @@ header {
   text-decoration: none;
   margin-left: 20px;
   font-weight: bold;
+  transition: color 0.25s ease, border-bottom 0.25s ease;
+  padding-bottom: 4px;
+}
+
+.enlace-menu:hover,
+.enlace-menu.activo {
+  color: #90caf9;
+  border-bottom: 2px solid #90caf9;
 }
 
 main {
@@ -49,6 +57,7 @@ main img {
   background-color: rgba(255, 255, 255, 0.911);
   padding: 30px;
   border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .caja-botones {
@@ -69,9 +78,296 @@ main img {
   border-radius: 8px;
   font-weight: bold;
   font-size: 1.2rem;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-gigante:hover {
+  background-color: rgba(6, 6, 95, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 footer {
   text-align: center;
   margin-top: auto;
+}
+
+/* ==========================================================================
+   Estilos para la sección Panorama
+   ========================================================================== */
+
+main.main-panoramas {
+  max-width: 1140px;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.banner-panoramas {
+  text-align: center;
+}
+
+.banner-panoramas h2 {
+  margin-top: 0;
+  color: #090981;
+  font-size: 2.1rem;
+  margin-bottom: 15px;
+}
+
+.banner-panoramas p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 850px;
+  margin: 0 auto 20px auto;
+}
+
+.insignias-destacadas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.insignia-pill {
+  background-color: rgba(9, 9, 129, 0.08);
+  color: #090981;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 1px solid rgba(9, 9, 129, 0.2);
+}
+
+/* Grilla de Panoramas */
+.grilla-panoramas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.tarjeta-panorama {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-panorama:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.28);
+}
+
+.tarjeta-img-contenedor {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.tarjeta-img-contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.tarjeta-panorama:hover .tarjeta-img-contenedor img {
+  transform: scale(1.05);
+}
+
+.badge-categoria {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(9, 9, 129, 0.88);
+  color: white;
+  padding: 5px 14px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-cuerpo {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarjeta-cuerpo h3 {
+  margin: 0 0 12px 0;
+  color: #090981;
+  font-size: 1.35rem;
+}
+
+.tarjeta-cuerpo p {
+  margin: 0 0 16px 0;
+  color: #444;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.detalles-actividad {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 14px;
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.detalles-actividad li {
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detalles-actividad strong {
+  color: #1e293b;
+}
+
+.boton-reserva-card {
+  display: block;
+  background-color: rgba(9, 9, 129, 0.85);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-reserva-card:hover {
+  background-color: #050550;
+  transform: translateY(-2px);
+}
+
+/* Sección de Recomendaciones / Consejos */
+.seccion-consejos h2 {
+  color: #090981;
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.85rem;
+  margin-bottom: 15px;
+}
+
+.seccion-consejos .subtitulo-consejos {
+  text-align: center;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.grilla-consejos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta-consejo {
+  background: rgba(9, 9, 129, 0.05);
+  border-left: 4px solid rgba(9, 9, 129, 0.781);
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.tarjeta-consejo h4 {
+  margin: 0 0 8px 0;
+  color: #090981;
+  font-size: 1.1rem;
+}
+
+.tarjeta-consejo p {
+  margin: 0;
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+/* Banner CTA Final */
+.banner-cta-final {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.94);
+  padding: 35px 25px;
+  border-radius: 10px;
+}
+
+.banner-cta-final h3 {
+  color: #090981;
+  font-size: 1.7rem;
+  margin: 0 0 10px 0;
+}
+
+.banner-cta-final p {
+  color: #444;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 22px auto;
+}
+
+.boton-cta-contacto {
+  display: inline-block;
+  background-color: rgba(9, 9, 129, 0.85);
+  color: white;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.15rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-cta-contacto:hover {
+  background-color: #050550;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   Diseño Responsivo
+   ========================================================================== */
+
+@media (max-width: 850px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .enlace-menu {
+    margin: 0 8px;
+  }
+
+  main {
+    flex-direction: column;
+    margin: 25px auto;
+    width: 92%;
+  }
+
+  .grilla-panoramas {
+    grid-template-columns: 1fr;
+  }
 }
