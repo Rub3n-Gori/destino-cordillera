@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../img/recursos/fondo.gif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background-color: rgba(9, 9, 129, 0.781);
+  color: white;
+  padding: 20px 40px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enlace-menu {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: flex;
+  gap: 40px;
+}
+
+main img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.caja-presentacion {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.911);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.caja-botones {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boton-gigante {
+  display: block;
+  background-color: rgba(9, 9, 129, 0.781);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+}
