@@ -38,28 +38,139 @@
 
         <fieldset>
           <legend>Detalles de la Reserva</legend>
-          <label for="servicio">Servicio de interés:</label>
-          <select id="servicio" name="servicio">
-            <option value="alojamiento">Alojamiento</option>
-            <option value="excursion">Excursión guiada</option>
-            <option value="paquete">Paquete Turístico Completo</option>
-            <option value="informacion">Solo solicitar información</option>
-          </select>
+          
+          <label>Tipo de reserva:</label>
+          <div style="margin-bottom: 1rem;">
+            <input type="radio" id="tipo-ambos" name="tipo-reserva" value="ambos" checked>
+            <label for="tipo-ambos" style="display:inline; font-weight:normal;">Alojamiento y Panorama</label><br>
+            <input type="radio" id="tipo-panorama" name="tipo-reserva" value="panorama">
+            <label for="tipo-panorama" style="display:inline; font-weight:normal;">Solo Panorama</label><br>
+            <input type="radio" id="tipo-hotel" name="tipo-reserva" value="hotel">
+            <label for="tipo-hotel" style="display:inline; font-weight:normal;">Solo Alojamiento</label>
+          </div>
 
+          <div id="grupo-panorama">
+            <label for="panorama">Selecciona un Panorama:</label>
+            <select id="panorama" name="panorama">
+              <option value="0" data-precio="0">-- Ninguno --</option>
+              <option value="trekking" data-precio="40000">Trekking al Glaciar ($40.000 p/p)</option>
+              <option value="esqui" data-precio="50000">Día de Nieve y Esquí ($50.000 p/p)</option>
+              <option value="termas" data-precio="25000">Termas Naturales ($25.000 p/p)</option>
+              <option value="cabalgata" data-precio="30000">Cabalgata con Arrieros ($30.000 p/p)</option>
+              <option value="rafting" data-precio="45000">Rafting Extremo ($45.000 p/p)</option>
+              <option value="astroturismo" data-precio="20000">Astroturismo ($20.000 p/p)</option>
+            </select>
+          </div>
+
+          <div id="grupo-hotel">
+            <label for="hotel">Selecciona un Alojamiento:</label>
+            <select id="hotel" name="hotel">
+              <option value="0" data-precio="0">-- Ninguno --</option>
+              <option value="hotel" data-precio="80000">Hotel Cordillera ($80.000 p/p por noche)</option>
+              <option value="cabanas" data-precio="65000">Cabañas del Bosque ($65.000 p/p por noche)</option>
+              <option value="hostal" data-precio="20000">Hostal Mochileros ($20.000 p/p por noche)</option>
+            </select>
+          </div>
+          
           <label for="fecha">Fecha estimada de viaje:</label>
           <input type="date" id="fecha" name="fecha">
-
+          
           <label for="personas">Número de personas:</label>
           <input type="number" id="personas" name="personas" min="1" max="20" value="1">
+          
+          <div style="background-color: #e6f2ff; padding: 1rem; border-radius: 4px; margin-bottom: 1rem; border: 1px solid #b3d9ff;">
+            <p style="margin: 0 0 0.5rem 0; color: #004c99;"><strong>Resumen de Costos Estimados</strong></p>
+            <p style="margin: 0; font-size: 0.9rem; color: #333;">Subtotal: $<span id="calc-subtotal">0</span></p>
+            <p style="margin: 0; font-size: 0.9rem; color: #333;">Cargo por servicio (10%): $<span id="calc-servicio">0</span></p>
+            <p style="margin: 0.5rem 0 0 0; font-size: 1.1rem; color: #0066cc; border-top: 1px solid #b3d9ff; padding-top: 0.5rem;">
+              <strong>Total Estimado: $<span id="calc-total">0</span></strong>
+            </p>
+          </div>
 
           <label for="mensaje">Mensaje adicional:</label>
-          <textarea id="mensaje" name="mensaje" rows="4"
-            placeholder="Escribe aquí tus dudas o requerimientos especiales..."></textarea>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tus dudas o requerimientos especiales..."></textarea>
         </fieldset>
-
+        
         <button type="submit" class="boton-enviar">Enviar Solicitud</button>
       </form>
     </section>
+
+    <script>
+      // Lógica de reservas dinámica
+      document.addEventListener('DOMContentLoaded', () => {
+        const radiosTipo = document.querySelectorAll('input[name="tipo-reserva"]');
+        const selectPanorama = document.getElementById('panorama');
+        const selectHotel = document.getElementById('hotel');
+        const inputPersonas = document.getElementById('personas');
+        const grupoPanorama = document.getElementById('grupo-panorama');
+        const grupoHotel = document.getElementById('grupo-hotel');
+        
+        // Elementos de cálculo
+        const subtotalSpan = document.getElementById('calc-subtotal');
+        const servicioSpan = document.getElementById('calc-servicio');
+        const totalSpan = document.getElementById('calc-total');
+
+        // Función para leer parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const panoramaParam = urlParams.get('panorama');
+        
+        // Autoseleccionar panorama si viene en la URL
+        if (panoramaParam) {
+          selectPanorama.value = panoramaParam;
+          document.getElementById('tipo-panorama').checked = true;
+        }
+
+        // Función para calcular el precio total
+        const calcularTotal = () => {
+          let precioPanorama = 0;
+          let precioHotel = 0;
+          const personas = parseInt(inputPersonas.value) || 1;
+          const tipo = document.querySelector('input[name="tipo-reserva"]:checked').value;
+
+          if (tipo === 'ambos' || tipo === 'panorama') {
+            precioPanorama = parseInt(selectPanorama.options[selectPanorama.selectedIndex].getAttribute('data-precio'));
+          }
+          if (tipo === 'ambos' || tipo === 'hotel') {
+            precioHotel = parseInt(selectHotel.options[selectHotel.selectedIndex].getAttribute('data-precio'));
+          }
+
+          const subtotal = (precioPanorama + precioHotel) * personas;
+          const cargoServicio = Math.round(subtotal * 0.10);
+          const total = subtotal + cargoServicio;
+
+          // Mostrar los valores formateados
+          subtotalSpan.textContent = subtotal.toLocaleString('es-CL');
+          servicioSpan.textContent = cargoServicio.toLocaleString('es-CL');
+          totalSpan.textContent = total.toLocaleString('es-CL');
+        };
+
+        // Función para mostrar/ocultar campos según el tipo de reserva
+        const toggleCampos = () => {
+          const tipo = document.querySelector('input[name="tipo-reserva"]:checked').value;
+          
+          if (tipo === 'ambos') {
+            grupoPanorama.style.display = 'block';
+            grupoHotel.style.display = 'block';
+          } else if (tipo === 'panorama') {
+            grupoPanorama.style.display = 'block';
+            grupoHotel.style.display = 'none';
+          } else if (tipo === 'hotel') {
+            grupoPanorama.style.display = 'none';
+            grupoHotel.style.display = 'block';
+          }
+          calcularTotal();
+        };
+
+        // Escuchar eventos de cambio
+        radiosTipo.forEach(radio => radio.addEventListener('change', toggleCampos));
+        selectPanorama.addEventListener('change', calcularTotal);
+        selectHotel.addEventListener('change', calcularTotal);
+        inputPersonas.addEventListener('input', calcularTotal);
+
+        // Inicializar estado
+        toggleCampos();
+      });
+    </script>
 
     <section class="seccion-info-contacto">
       <h3>Datos de Contacto</h3>
