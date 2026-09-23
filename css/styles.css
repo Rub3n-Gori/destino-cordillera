@@ -376,97 +376,218 @@ main.main-panoramas {
    Estilos específicos para la página de Reserva y Contacto
    ========================================================================== */
 .contenedor-contacto {
-  padding: 2rem;
+  padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.columnas-contacto {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+.titulo-centro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .seccion-formulario,
 .seccion-info-contacto {
-  background-color: #f9f9f9;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(9, 9, 129, 0.08);
+  border-top: 4px solid rgba(9, 9, 129, 0.781);
 }
 
 .formulario-reserva fieldset {
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  background-color: #f8fafc;
 }
 
 .formulario-reserva legend {
-  font-weight: bold;
-  color: #333;
-  padding: 0 0.5rem;
+  font-weight: 700;
+  color: #090981;
+  padding: 0 1rem;
+  font-size: 1.15rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
 }
 
 .formulario-reserva label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 600;
-  color: #555;
+  color: #334155;
+  font-size: 0.95rem;
 }
 
-.formulario-reserva input,
+.formulario-reserva input:not([type="radio"]),
 .formulario-reserva select,
 .formulario-reserva textarea {
   width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
   font-family: inherit;
+  font-size: 1rem;
+  color: #1e293b;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
-.formulario-reserva input:focus,
+.formulario-reserva input:not([type="radio"]):focus,
 .formulario-reserva select:focus,
 .formulario-reserva textarea:focus {
-  border-color: #0066cc;
+  border-color: rgba(9, 9, 129, 0.5);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+  box-shadow: 0 0 0 3px rgba(9, 9, 129, 0.15);
+  background-color: #fff;
+}
+
+/* Nuevos estilos para radios */
+.opciones-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .opciones-reserva {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.opcion-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.opcion-radio:hover {
+  border-color: #090981;
+  background-color: #f0f4ff;
+}
+
+.opcion-radio input[type="radio"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #090981;
+}
+
+.opcion-radio span {
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Caja resumen elegante */
+.caja-resumen {
+  background: linear-gradient(135deg, rgba(9,9,129,0.05) 0%, rgba(9,9,129,0.1) 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #090981;
+}
+
+.resumen-titulo {
+  margin: 0 0 1rem 0;
+  color: #090981;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.resumen-detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resumen-detalle p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.resumen-total {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px dashed #cbd5e1;
+  display: flex;
+  justify-content: space-between;
+  color: #090981;
+  font-size: 1.25rem;
 }
 
 .boton-enviar {
-  background-color: #0066cc;
+  background-color: rgba(9, 9, 129, 0.85);
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 4px;
+  padding: 1.2rem 2rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
   width: 100%;
+  box-shadow: 0 4px 12px rgba(9, 9, 129, 0.2);
 }
 
 .boton-enviar:hover {
-  background-color: #004c99;
+  background-color: #050550;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(9, 9, 129, 0.3);
 }
 
 .seccion-info-contacto h3 {
-  color: #333;
+  color: #090981;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.5rem;
 }
 
 .seccion-info-contacto p {
-  margin-bottom: 0.5rem;
-  color: #555;
+  margin-bottom: 0.75rem;
+  color: #475569;
+  line-height: 1.6;
 }
 
 .mapa-referencial img {
   display: block;
   margin-top: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mapa-referencial img:hover {
+  transform: scale(1.02);
 }
 
 /* Responsividad para pantallas grandes */
-@media (min-width: 768px) {
-  .contenedor-contacto {
+@media (min-width: 850px) {
+  .columnas-contacto {
     flex-direction: row;
     align-items: flex-start;
   }
@@ -477,12 +598,35 @@ main.main-panoramas {
 
   .seccion-info-contacto {
     flex: 1;
+    position: sticky;
+    top: 20px;
   }
 }
 
 /* ==========================================================================
    Estilos específicos para la página de Alojamiento y Gastronomía
    ========================================================================== */
+.main-alojamiento {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 0;
+  width: 100%;
+}
+
+.titulo-seccion {
+  color: #090981;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  align-self: flex-start;
+}
+
 .contenedor-tarjetas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

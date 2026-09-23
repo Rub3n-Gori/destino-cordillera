@@ -20,7 +20,8 @@
   </header>
 
   <main class="contenedor-contacto">
-    <h2>Reserva tu Aventura</h2>
+    <h2 class="titulo-seccion titulo-centro">Reserva tu Aventura</h2>
+    <div class="columnas-contacto">
 
     <section class="seccion-formulario">
       <form action="#" method="POST" class="formulario-reserva">
@@ -40,13 +41,19 @@
           <legend>Detalles de la Reserva</legend>
           
           <label>Tipo de reserva:</label>
-          <div style="margin-bottom: 1rem;">
-            <input type="radio" id="tipo-ambos" name="tipo-reserva" value="ambos" checked>
-            <label for="tipo-ambos" style="display:inline; font-weight:normal;">Alojamiento y Panorama</label><br>
-            <input type="radio" id="tipo-panorama" name="tipo-reserva" value="panorama">
-            <label for="tipo-panorama" style="display:inline; font-weight:normal;">Solo Panorama</label><br>
-            <input type="radio" id="tipo-hotel" name="tipo-reserva" value="hotel">
-            <label for="tipo-hotel" style="display:inline; font-weight:normal;">Solo Alojamiento</label>
+          <div class="opciones-reserva">
+            <label class="opcion-radio">
+              <input type="radio" id="tipo-ambos" name="tipo-reserva" value="ambos" checked>
+              <span>Alojamiento y Panorama</span>
+            </label>
+            <label class="opcion-radio">
+              <input type="radio" id="tipo-panorama" name="tipo-reserva" value="panorama">
+              <span>Solo Panorama</span>
+            </label>
+            <label class="opcion-radio">
+              <input type="radio" id="tipo-hotel" name="tipo-reserva" value="hotel">
+              <span>Solo Alojamiento</span>
+            </label>
           </div>
 
           <div id="grupo-panorama">
@@ -78,12 +85,14 @@
           <label for="personas">Número de personas:</label>
           <input type="number" id="personas" name="personas" min="1" max="20" value="1">
           
-          <div style="background-color: #e6f2ff; padding: 1rem; border-radius: 4px; margin-bottom: 1rem; border: 1px solid #b3d9ff;">
-            <p style="margin: 0 0 0.5rem 0; color: #004c99;"><strong>Resumen de Costos Estimados</strong></p>
-            <p style="margin: 0; font-size: 0.9rem; color: #333;">Subtotal: $<span id="calc-subtotal">0</span></p>
-            <p style="margin: 0; font-size: 0.9rem; color: #333;">Cargo por servicio (10%): $<span id="calc-servicio">0</span></p>
-            <p style="margin: 0.5rem 0 0 0; font-size: 1.1rem; color: #0066cc; border-top: 1px solid #b3d9ff; padding-top: 0.5rem;">
-              <strong>Total Estimado: $<span id="calc-total">0</span></strong>
+          <div class="caja-resumen">
+            <p class="resumen-titulo"><strong>Resumen de Costos Estimados</strong></p>
+            <div class="resumen-detalle">
+              <p>Subtotal: <span>$<span id="calc-subtotal">0</span></span></p>
+              <p>Cargo por servicio (10%): <span>$<span id="calc-servicio">0</span></span></p>
+            </div>
+            <p class="resumen-total">
+              <strong>Total Estimado: <span>$<span id="calc-total">0</span></span></strong>
             </p>
           </div>
 
@@ -186,6 +195,7 @@
           alt="Mapa de ubicación Destino Cordillera" style="width: 100%; border-radius: 8px;">
       </div>
     </section>
+    </div>
   </main>
 
   <footer>
