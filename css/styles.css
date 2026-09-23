@@ -480,3 +480,66 @@ main.main-panoramas {
   }
 }
 
+/* ==========================================================================
+   Estilos específicos para la página de Alojamiento y Gastronomía
+   ========================================================================== */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.tarjeta-info {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-info img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  border-radius: 8px 8px 0 0;
+}
+
+.contenido-tarjeta {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contenido-tarjeta h3 {
+  color: #090981;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.contenido-tarjeta p {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.contenido-tarjeta p:last-child {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  background-color: #f0f4f8;
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: #333;
+}
