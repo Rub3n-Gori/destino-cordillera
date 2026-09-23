@@ -372,3 +372,111 @@ main.main-panoramas {
   }
 }
 
+/* ==========================================================================
+   Estilos específicos para la página de Reserva y Contacto
+   ========================================================================== */
+.contenedor-contacto {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.seccion-formulario,
+.seccion-info-contacto {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-reserva fieldset {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.formulario-reserva legend {
+  font-weight: bold;
+  color: #333;
+  padding: 0 0.5rem;
+}
+
+.formulario-reserva label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.formulario-reserva input,
+.formulario-reserva select,
+.formulario-reserva textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.formulario-reserva input:focus,
+.formulario-reserva select:focus,
+.formulario-reserva textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+.boton-enviar {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.boton-enviar:hover {
+  background-color: #004c99;
+}
+
+.seccion-info-contacto h3 {
+  color: #333;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.seccion-info-contacto p {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.mapa-referencial img {
+  display: block;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad para pantallas grandes */
+@media (min-width: 768px) {
+  .contenedor-contacto {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .seccion-formulario {
+    flex: 2;
+  }
+
+  .seccion-info-contacto {
+    flex: 1;
+  }
+}
+
