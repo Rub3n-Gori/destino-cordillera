@@ -376,19 +376,27 @@ main.main-panoramas {
    Estilos específicos para la página de Reserva y Contacto
    ========================================================================== */
 .contenedor-contacto {
+  display: flex;
+  flex-direction: column;
   padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .columnas-contacto {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 
 .titulo-centro {
   text-align: center;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2rem;
 }
 
@@ -616,15 +624,22 @@ main.main-panoramas {
   width: 100%;
 }
 
+.seccion-alojamiento,
+.seccion-gastronomia {
+  width: 100%;
+}
+
 .titulo-seccion {
+  background-color: rgba(255, 255, 255, 0.94);
   color: #090981;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   margin-top: 1rem;
-  border-bottom: 3px solid #0066cc;
-  padding-bottom: 0.5rem;
-  display: inline-block;
-  align-self: flex-start;
+  padding: 10px 24px;
+  border-radius: 8px;
+  border-bottom: 4px solid #090981;
+  display: table;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .contenedor-tarjetas {
