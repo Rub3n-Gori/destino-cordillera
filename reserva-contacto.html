@@ -27,147 +27,63 @@
       <div class="columnas-contacto">
         <section class="seccion-formulario">
           <form action="#" method="GET" class="formulario-reserva">
-            <fieldset>
-              <legend>Datos Personales</legend>
-              <label for="nombre">Nombre completo:</label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                required
-                placeholder="Ej: Juan Pérez"
-              />
+            <h3>Datos Personales</h3>
+            <label>Nombre completo:</label>
+            <input
+              type="text"
+              class="caja-texto"
+              placeholder="Ej: Juan Perez"
+            />
 
-              <label for="email">Correo electrónico:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="ejemplo@correo.com"
-              />
+            <label>Correo electrónico:</label>
+            <input
+              type="email"
+              class="caja-texto"
+              placeholder="ejemplo@correo.com"
+            />
 
-              <label for="telefono">Teléfono:</label>
-              <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                placeholder="+56 9 1234 5678"
-              />
-            </fieldset>
+            <label>Teléfono:</label>
+            <input
+              type="tel"
+              class="caja-texto"
+              placeholder="+56 9 1234 5678"
+            />
 
-            <fieldset>
-              <legend>Detalles de la Reserva</legend>
+            <h3>Detalles de la Reserva</h3>
+            <label>Selecciona un Panorama:</label>
+            <select class="caja-texto">
+              <option>Ninguno</option>
+              <option>Trekking al Glaciar</option>
+              <option>Día de Nieve y Esquí</option>
+              <option>Termas Naturales</option>
+            </select>
 
-              <label>Tipo de reserva:</label>
-              <div class="opciones-reserva">
-                <label class="opcion-radio">
-                  <input
-                    type="radio"
-                    id="tipo-ambos"
-                    name="tipo-reserva"
-                    value="ambos"
-                    checked
-                  />
-                  <span>Alojamiento y Panorama</span>
-                </label>
-                <label class="opcion-radio">
-                  <input
-                    type="radio"
-                    id="tipo-panorama"
-                    name="tipo-reserva"
-                    value="panorama"
-                  />
-                  <span>Solo Panorama</span>
-                </label>
-                <label class="opcion-radio">
-                  <input
-                    type="radio"
-                    id="tipo-hotel"
-                    name="tipo-reserva"
-                    value="hotel"
-                  />
-                  <span>Solo Alojamiento</span>
-                </label>
-              </div>
+            <label>Selecciona un Alojamiento:</label>
+            <select class="caja-texto">
+              <option>Ninguno</option>
+              <option>Hotel Cordillera</option>
+              <option>Cabañas del Bosque</option>
+            </select>
 
-              <div id="grupo-panorama">
-                <label for="panorama">Selecciona un Panorama:</label>
-                <select id="panorama" name="panorama">
-                  <option value="0" data-precio="0">-- Ninguno --</option>
-                  <option value="trekking" data-precio="40000">
-                    Trekking al Glaciar ($40.000 p/p)
-                  </option>
-                  <option value="esqui" data-precio="50000">
-                    Día de Nieve y Esquí ($50.000 p/p)
-                  </option>
-                  <option value="termas" data-precio="25000">
-                    Termas Naturales ($25.000 p/p)
-                  </option>
-                  <option value="cabalgata" data-precio="30000">
-                    Cabalgata con Arrieros ($30.000 p/p)
-                  </option>
-                  <option value="rafting" data-precio="45000">
-                    Rafting Extremo ($45.000 p/p)
-                  </option>
-                  <option value="astroturismo" data-precio="20000">
-                    Astroturismo ($20.000 p/p)
-                  </option>
-                </select>
-              </div>
+            <label>Fecha estimada de viaje:</label>
+            <input type="number" class="caja-texto" min="1" value="1" />
 
-              <div id="grupo-hotel">
-                <label for="hotel">Selecciona un Alojamiento:</label>
-                <select id="hotel" name="hotel">
-                  <option value="0" data-precio="0">-- Ninguno --</option>
-                  <option value="hotel" data-precio="80000">
-                    Hotel Cordillera ($80.000 p/p por noche)
-                  </option>
-                  <option value="cabanas" data-precio="65000">
-                    Cabañas del Bosque ($65.000 p/p por noche)
-                  </option>
-                  <option value="hostal" data-precio="20000">
-                    Hostal Mochileros ($20.000 p/p por noche)
-                  </option>
-                </select>
-              </div>
+            <label>Número de personas:</label>
+            <input type="number" class="caja-texto" min="1" value="1" />
 
-              <label for="fecha">Fecha estimada de viaje:</label>
-              <input type="date" id="fecha" name="fecha" />
+            <label>Mensaje adicional:</label>
+            <textarea class="caja-texto" rows="4"></textarea>
 
-              <label for="personas">Número de personas:</label>
-              <input
-                type="number"
-                id="personas"
-                name="personas"
-                min="1"
-                max="20"
-                value="1"
-              />
+            <div class="caja-mensaje-final">
+              <p>
+                Al enviar esta solicitud, nuestro equipo le enviará la
+                cotización a su correo electrónico.
+              </p>
+            </div>
 
-              <div class="caja-resumen">
-                <p class="resumen-titulo">
-                  <strong>Cotización de Reserva</strong>
-                </p>
-                <div class="resumen-detalle">
-                  <p>
-                    Al enviar esta solicitud, nuestro equipo confirmará
-                    disponibilidad y le enviará el valor total detallado a su
-                    correo electrónico.
-                  </p>
-                </div>
-              </div>
-
-              <label for="mensaje">Mensaje adicional:</label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                rows="4"
-                placeholder="Escribe aquí tus dudas o requerimientos especiales..."
-              ></textarea>
-            </fieldset>
-
-            <button type="submit" class="boton-enviar">Enviar Solicitud</button>
+            <button type="submit" class="boton-gigante">
+              Enviar solicitud
+            </button>
           </form>
         </section>
 
@@ -185,7 +101,6 @@
 
           <h3>Ubicación</h3>
           <div class="mapa-referencial">
-            <!-- Mapa simulado con imagen -->
             <img
               src="img/recursos/ubicacion.png"
               alt="Mapa de ubicación Destino Cordillera"
