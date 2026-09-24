@@ -1,234 +1,278 @@
 <!doctype html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panoramas y Actividades - Destino Cordillera</title>
     <link rel="stylesheet" href="css/styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Destino Cordillera</h1>
-        <nav>
-            <a href="index.html" class="enlace-menu">Inicio</a>
-            <a href="panorama.html" class="enlace-menu activo">Panoramas</a>
-            <a href="alojamiento-gastronomia.html" class="enlace-menu">Alojamiento y Gastronomia</a>
-            <a href="reserva-contacto.html" class="enlace-menu">Reserva y contacto</a>
-        </nav>
+      <h1>Destino Cordillera</h1>
+      <nav>
+        <a href="index.html" class="enlace-menu">Inicio</a>
+        <a href="panorama.html" class="enlace-menu activo">Panoramas</a>
+        <a href="alojamiento-gastronomia.html" class="enlace-menu"
+          >Alojamiento y Gastronomia</a
+        >
+        <a href="reserva-contacto.html" class="enlace-menu"
+          >Reserva y contacto</a
+        >
+      </nav>
     </header>
 
     <main class="main-panoramas">
-        <!-- Sección Hero / Introduccion -->
-        <section class="caja-presentacion banner-panoramas">
-            <h2>Panoramas y Actividades en la Cordillera</h2>
+      <section class="caja-presentacion banner-panoramas">
+        <h2>Panoramas y Actividades en la Cordillera</h2>
+        <p>
+          Descubre las mejores actividades en la cordillera. Experiencias
+          pensadas para los amantes de la naturaleza, el deporte y las familias
+          que buscan desconectarse con buen clima y aire puro.
+        </p>
+        <div class="insignias-destacadas">
+          <span class="insignia-pill"> Guías Locales Certificados</span>
+          <span class="insignia-pill"> Seguridad y Equipamiento</span>
+          <span class="insignia-pill"> Panoramas Familiares y Extremos</span>
+          <span class="insignia-pill"> Turismo Sustentable</span>
+        </div>
+      </section>
+
+      <section class="grilla-panoramas">
+        <!-- Tarjeta 1: Trekking y Montaña -->
+        <article class="tarjeta-panorama">
+          <div class="tarjeta-img-contenedor">
+            <img
+              src="img/recursos/trekking.jpg"
+              alt="Trekking en la cordillera de los Andes"
+            />
+            <span class="badge-categoria">Trekking y Montaña</span>
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Trekking al Glaciar y Lagunas Andinas</h3>
             <p>
-                Descubre las mejores experiencias turísticas en el corazón de los Andes,
-                diseñadas para amantes de la naturaleza, el deporte al aire libre y familias
-                que buscan desconectarse rodeados de paisajes sobrecogedores y aire puro de montaña.
+              Sube por senderos rodeados de cerros y valles valles, una ruta
+              perfecta para conectar con la naturaleza y contemplar condores de
+              cerca.
             </p>
-            <div class="insignias-destacadas">
-                <span class="insignia-pill"> Guias Locales Certificados</span>
-                <span class="insignia-pill"> Seguridad y Equipamiento</span>
-                <span class="insignia-pill"> Panoramas Familiares y Extremos</span>
-                <span class="insignia-pill"> Turismo Sustentable</span>
-            </div>
-        </section>
+            <ul class="detalles-actividad">
+              <li>
+                <strong>Dificultad:</strong> Media (buena condición física)
+              </li>
+              <li><strong>Duración:</strong> 6 horas (Jornada completa)</li>
+              <li><strong>Temporada:</strong> Octubre a Mayo</li>
+              <li><strong>Incluye:</strong> Guía bilingüe, bastones y snack</li>
+            </ul>
+          </div>
+        </article>
 
-        <!-- Grilla de Actividades / Panoramas -->
-        <section class="grilla-panoramas">
-            <!-- Tarjeta 1: Trekking -->
-            <article class="tarjeta-panorama">
-                <div class="tarjeta-img-contenedor">
-                    <img src="img/recursos/trekking.jpg" alt="Trekking en la cordillera de los Andes" />
-                    <span class="badge-categoria">Trekking y Montaña</span>
-                </div>
-                <div class="tarjeta-cuerpo">
-                    <h3>Trekking al Glaciar y Lagunas Andinas</h3>
-                    <p>
-                        Asciende por senderos milenarios rodeados de imponentes macizos rocosos y
-                        valles glaciares, una travesia inolvidable para conectar con la naturaleza virgen
-                        y contemplar condores en pleno vuelo.
-                    </p>
-                    <ul class="detalles-actividad">
-                        <li><strong>Dificultad:</strong> Media (buena condicion fisica)</li>
-                        <li><strong>Duracion:</strong> 6 horas (Jornada completa)</li>
-                        <li><strong>Temporada:</strong> Octubre a Mayo</li>
-                        <li><strong>Incluye:</strong> Guia bilingüe, bastones y snack</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Tarjeta 2: Nieve y Esqui -->
-            <article class="tarjeta-panorama">
-                <div class="tarjeta-img-contenedor">
-                    <img src="img/recursos/esqui.jpg" alt="Esqui y snowboard en centro invernal cordillerano" />
-                    <span class="badge-categoria">Nieve e Invierno</span>
-                </div>
-                <div class="tarjeta-cuerpo">
-                    <h3>Dia de Nieve, Esqui y Snowboard</h3>
-                    <p>
-                        Disfruta de la mejor nieve de la cordillera en modernos centros invernales,
-                        contamos con zonas de aprendizaje para principiantes y pistas desafiantes para los mas
-                        experimentados.
-                    </p>
-                    <ul class="detalles-actividad">
-                        <li><strong>Dificultad:</strong> Todos los niveles</li>
-                        <li><strong>Duracion:</strong> Dia completo (08:30 a 17:30 hrs)</li>
-                        <li><strong>Temporada:</strong> Junio a Septiembre</li>
-                        <li><strong>Incluye:</strong> Ticket de andarivel y opcion de arriendo</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Tarjeta 3: Termas -->
-            <article class="tarjeta-panorama">
-                <div class="tarjeta-img-contenedor">
-                    <img src="img/recursos/termas.jpg" alt="Pozones de aguas termales en la montaña" />
-                    <span class="badge-categoria">Relax y Bienestar</span>
-                </div>
-                <div class="tarjeta-cuerpo">
-                    <h3>Termas Naturales y Spa de Montaña</h3>
-                    <p>
-                        Sumergete en pozones de aguas termales volcanicas con minerales curativos mientras
-                        aprecias la vista panoramica de las cumbres nevadas. Un descanso reparador para
-                        cuerpo y mente.
-                    </p>
-                    <ul class="detalles-actividad">
-                        <li><strong>Dificultad:</strong> Baja (Apto para toda la familia)</li>
-                        <li><strong>Duracion:</strong> 4 a 5 horas</li>
-                        <li><strong>Temporada:</strong> Todo el año</li>
-                        <li><strong>Incluye:</strong> Entrada a pozones, vestidores y toallas</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Tarjeta 4: Cabalgata -->
-            <article class="tarjeta-panorama">
-                <div class="tarjeta-img-contenedor">
-                    <img src="img/recursos/cabalgata.jpg" alt="Cabalgatas tradicionales por valles cordilleranos" />
-                    <span class="badge-categoria">Cultura y Paisajes</span>
-                </div>
-                <div class="tarjeta-cuerpo">
-                    <h3>Cabalgatas con Arrieros Cordilleranos</h3>
-                    <p>
-                        Acompaña a arrieros locales en una expedicion a caballo por quebradas secretas,
-                        cruzando arroyos cristalinos y alcanzando miradores que no son accesibles en vehiculo.
-                    </p>
-                    <ul class="detalles-actividad">
-                        <li><strong>Dificultad:</strong> Baja a Media</li>
-                        <li><strong>Duracion:</strong> 4 horas</li>
-                        <li><strong>Temporada:</strong> Todo el año</li>
-                        <li><strong>Incluye:</strong> Caballo manso, montura, casco y guia arriero</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Tarjeta 5: Rafting -->
-            <article class="tarjeta-panorama">
-                <div class="tarjeta-img-contenedor">
-                    <img src="img/recursos/rafting.jpg" alt="Rafting en rápidos de río cordillerano" />
-                    <span class="badge-categoria">Aventura Extrema</span>
-                </div>
-                <div class="tarjeta-cuerpo">
-                    <h3>Rafting y Adrenalina en Rapidos</h3>
-                    <p>
-                        Siente la emocion pura descendiendo por los torrentosos ríos de la cordillera.
-                        Enfrenta rápidos clase III y IV con guias certificados y equipamiento de maxima
-                        seguridad internacional.
-                    </p>
-                    <ul class="detalles-actividad">
-                        <li><strong>Dificultad:</strong> Media / Exigente</li>
-                        <li><strong>Duracion:</strong> 3 horas (1.5 horas en el río)</li>
-                        <li><strong>Temporada:</strong> Septiembre a Abril</li>
-                        <li><strong>Incluye:</strong> Traje termico, chaleco salvavidas, casco y fotos profesionales
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Tarjeta 6: Astroturismo -->
-            <article class="tarjeta-panorama">
-                <div class="tarjeta-img-contenedor">
-                    <img src="img/recursos/astroturismo.jpg"
-                        alt="Observación astronomica bajo el cielo de la cordillera" />
-                    <span class="badge-categoria">Noche y Astronomia</span>
-                </div>
-                <div class="tarjeta-cuerpo">
-                    <h3>Astroturismo: Noche Bajo las Estrellas</h3>
-                    <p>
-                        Aprovecha uno de los cielos mas limpios del planeta libre de contaminacion de la cuidad.
-                        Observa constelaciones, planetas y nebulosas a traves de telescopios astronomicos
-                        guiado por expertos.
-                    </p>
-                    <ul class="detalles-actividad">
-                        <li><strong>Dificultad:</strong> Baja (Todo público)</li>
-                        <li><strong>Duracion:</strong> 3.5 horas (horario nocturno)</li>
-                        <li><strong>Temporada:</strong> Todo el año (noches despejadas)</li>
-                        <li><strong>Incluye:</strong> Telescopios de alta gama, puntero laser y bebida caliente</li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-
-        <!-- Sección Consejos de Montaña -->
-        <section class="caja-presentacion seccion-consejos">
-            <h2>Recomendaciones para tu Visita a la Cordillera</h2>
-            <p class="subtitulo-consejos">
-                La alta montaña es un entorno maravilloso pero exigente, sigue estos consejos para una mejor
-                experiencia.
+        <!-- Tarjeta 2: Nieve y Esqui -->
+        <article class="tarjeta-panorama">
+          <div class="tarjeta-img-contenedor">
+            <img
+              src="img/recursos/esqui.jpg"
+              alt="Esqui y snowboard en centro invernal cordillerano"
+            />
+            <span class="badge-categoria">Nieve e Invierno</span>
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Dia de Nieve, Esquí y Snowboard</h3>
+            <p>
+              Disfruta de la mejor nieve de la cordillera en modernos centros
+              invernales, contamos con zonas de aprendizaje para principiantes y
+              pistas desafiantes para los más experimentados.
             </p>
-            <div class="grilla-consejos">
-                <div class="tarjeta-consejo">
-                    <h4>Viste en Capas</h4>
-                    <p>
-                        El clima de cordillera cambia velozmente, usa una capa transpirable, abrigo intermedio (polar o
-                        pluma) y chaqueta impermeable o cortaviento.
-                    </p>
-                </div>
-                <div class="tarjeta-consejo">
-                    <h4>Proteccion Solar UV</h4>
-                    <p>
-                        La radiacion solar aumenta con la altura y el reflejo de la nieve o roca, aplica protector solar
-                        SPF 50+, gafas con filtro UV y sombrero.
-                    </p>
-                </div>
-                <div class="tarjeta-consejo">
-                    <h4>Hidratacion y Energia</h4>
-                    <p>
-                        El aire de montaña es seco y favorece el cansancio, lleva al menos 2 litros de agua por persona,
-                        frutos secos y barras energéticas.
-                    </p>
-                </div>
-                <div class="tarjeta-consejo">
-                    <h4>No Deje Rastro</h4>
-                    <p>
-                        Conserva el patrimonio natural, debes regresar con toda tu basura, no prendas fuego en zonas no
-                        autorizadas y respeta la flora y fauna.
-                    </p>
-                </div>
-            </div>
-        </section>
+            <ul class="detalles-actividad">
+              <li><strong>Dificultad:</strong> Todos los niveles</li>
+              <li>
+                <strong>Duración:</strong> Día completo (08:30 a 17:30 hrs)
+              </li>
+              <li><strong>Temporada:</strong> Junio a Septiembre</li>
+              <li>
+                <strong>Incluye:</strong> Ticket de andarivel y opción de
+                arriendo
+              </li>
+            </ul>
+          </div>
+        </article>
 
-        <Banner CTA Final de Reserva>
-            <section class="banner-cta-final">
-                <h3>¿Listo para vivir tu proxima gran experiencia?</h3>
-                <p>
-                    Reserva hoy mismo tu cupo para cualquiera de nuestros panoramas o contactanos si necesitas un
-                    itinerario
-                    personalizado para grupos o empresas.
-                </p>
-                <a href="reserva-contacto.html" class="boton-cta-contacto">Ir a Reserva y Contacto</a>
-            </section>
+        <!-- Tarjeta 3: Termas -->
+        <article class="tarjeta-panorama">
+          <div class="tarjeta-img-contenedor">
+            <img
+              src="img/recursos/termas.jpg"
+              alt="Pozones de aguas termales en la montaña"
+            />
+            <span class="badge-categoria">Relax y Bienestar</span>
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Termas Naturales y Spa de Montaña</h3>
+            <p>
+              Sumérgete en aguas termales de origen volcánicas mientras
+              disfrutas de una vista panorámica a la montaña. El mejor descanso
+              para cerrar el día.
+            </p>
+            <ul class="detalles-actividad">
+              <li>
+                <strong>Dificultad:</strong> Baja (Apto para toda la familia)
+              </li>
+              <li><strong>Duración:</strong> 4 a 5 horas</li>
+              <li><strong>Temporada:</strong> Todo el año</li>
+              <li>
+                <strong>Incluye:</strong> Entrada a pozones, vestidores y
+                toallas
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Tarjeta 4: Cabalgata -->
+        <article class="tarjeta-panorama">
+          <div class="tarjeta-img-contenedor">
+            <img
+              src="img/recursos/cabalgata.jpg"
+              alt="Cabalgatas tradicionales por valles cordilleranos"
+            />
+            <span class="badge-categoria">Cultura y Paisajes</span>
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Cabalgatas con Arrieros Cordilleranos</h3>
+            <p>
+              Acompaña a los arrieros de la zona en una expedición a caballo por
+              rutas escondidas y miradores a los que ningún vehículo puede
+              llegar.
+            </p>
+            <ul class="detalles-actividad">
+              <li><strong>Dificultad:</strong> Baja a Media</li>
+              <li><strong>Duración:</strong> 4 horas</li>
+              <li><strong>Temporada:</strong> Todo el año</li>
+              <li>
+                <strong>Incluye:</strong> Caballo manso, montura, casco y guia
+                arriero
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Tarjeta 5: Rafting -->
+        <article class="tarjeta-panorama">
+          <div class="tarjeta-img-contenedor">
+            <img
+              src="img/recursos/rafting.jpg"
+              alt="Rafting en rápidos de río cordillerano"
+            />
+            <span class="badge-categoria">Aventura Extrema</span>
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Rafting y Adrenalina en Rapidos</h3>
+            <p>
+              Vive la adrelania bajando por los ríos de la cordillera.
+              Enfréntate a los rápidos con guias expertos y la máxima seguridad.
+            </p>
+            <ul class="detalles-actividad">
+              <li><strong>Dificultad:</strong> Media / Exigente</li>
+              <li><strong>Duración:</strong> 3 horas (1.5 horas en el río)</li>
+              <li><strong>Temporada:</strong> Septiembre a Abril</li>
+              <li>
+                <strong>Incluye:</strong> Traje térmico, chaleco salvavidas,
+                casco y fotos profesionales
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Tarjeta 6: Astroturismo -->
+        <article class="tarjeta-panorama">
+          <div class="tarjeta-img-contenedor">
+            <img
+              src="img/recursos/astroturismo.jpg"
+              alt="Observación astronomica bajo el cielo de la cordillera"
+            />
+            <span class="badge-categoria">Noche y Astronomia</span>
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Astroturismo: Noche Bajo las Estrellas</h3>
+            <p>
+              Aprovecha uno de los cielos más limpios del planeta, lejos de la
+              contaminación de la cuidad. Observa planetas y cosntelaciones a
+              través de telescopios astronómicos.
+            </p>
+            <ul class="detalles-actividad">
+              <li><strong>Dificultad:</strong> Baja (Todo público)</li>
+              <li><strong>Duración:</strong> 3.5 horas (horario nocturno)</li>
+              <li>
+                <strong>Temporada:</strong> Todo el año (noches despejadas)
+              </li>
+              <li>
+                <strong>Incluye:</strong> Telescopios de alta gama, puntero
+                láser y bebida caliente
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- Seccion de Consejos  -->
+      <section class="caja-presentacion seccion-consejos">
+        <h2>Recomendaciones para tu Visita a la Cordillera</h2>
+        <p class="subtitulo-consejos">
+          La alta montaña es un entorno maravilloso pero exigente, sigue estos
+          consejos para una mejor experiencia.
+        </p>
+        <div class="grilla-consejos">
+          <div class="tarjeta-consejo">
+            <h4>Viste en Capas</h4>
+            <p>
+              El clima de cordillera cambia velozmente, usa una capa
+              transpirable, abrigo intermedio (polar o pluma) y chaqueta
+              impermeable o cortaviento.
+            </p>
+          </div>
+          <div class="tarjeta-consejo">
+            <h4>Protección Solar UV</h4>
+            <p>
+              La radiación solar aumenta con la altura y el reflejo de la nieve
+              o roca, aplica protector solar SPF 50+, gafas con filtro UV y
+              sombrero.
+            </p>
+          </div>
+          <div class="tarjeta-consejo">
+            <h4>Hidratación y Energia</h4>
+            <p>
+              El aire de montaña es seco y favorece el cansancio, lleva al menos
+              2 litros de agua por persona, frutos secos y barras energéticas.
+            </p>
+          </div>
+          <div class="tarjeta-consejo">
+            <h4>No Deje Rastro</h4>
+            <p>
+              Conserva el patrimonio natural, debes regresar con toda tu basura,
+              no prendas fuego en zonas no autorizadas y respeta la flora y
+              fauna.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner final de reserva -->
+      <section class="banner-cta-final">
+        <h3>¿Listo para vivir tu próxima gran experiencia?</h3>
+        <p>
+          Reserva hoy mismo tu cupo para cualquiera de nuestros panoramas o
+          contáctanos si necesitas un itinerario personalizado para grupos o
+          empresas.
+        </p>
+        <a href="reserva-contacto.html" class="boton-cta-contacto"
+          >Ir a Reserva y Contacto</a
+        >
+      </section>
     </main>
 
     <footer>
-        <p>
-            &copy; 2026 Destino Cordillera - Arquimedes Barraza - Rubén Gorigoitia -
-            Jesus Poturo
-        </p>
+      <p>
+        &copy; 2026 Destino Cordillera - Arquimedes Barraza - Rubén Gorigoitia -
+        Jesus Poturo
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>

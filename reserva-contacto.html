@@ -1,208 +1,206 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserva y Contacto - Destino Cordillera</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reserva y Contacto - Destino Cordillera</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+  <body>
+    <header>
+      <h1>Destino Cordillera</h1>
+      <nav>
+        <a href="index.html" class="enlace-menu">Inicio</a>
+        <a href="panorama.html" class="enlace-menu">Panoramas</a>
+        <a href="alojamiento-gastronomia.html" class="enlace-menu"
+          >Alojamiento y Gastronomia</a
+        >
+        <a href="reserva-contacto.html" class="enlace-menu activo"
+          >Reserva y contacto</a
+        >
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <h1>Destino Cordillera</h1>
-    <nav>
-      <a href="index.html" class="enlace-menu">Inicio</a>
-      <a href="panorama.html" class="enlace-menu">Panoramas</a>
-      <a href="alojamiento-gastronomia.html" class="enlace-menu">Alojamiento y Gastronomia</a>
-      <a href="reserva-contacto.html" class="enlace-menu activo">Reserva y contacto</a>
-    </nav>
-  </header>
+    <main class="contenedor-contacto">
+      <h2 class="titulo-seccion titulo-centro">Reserva tu Aventura</h2>
+      <div class="columnas-contacto">
+        <section class="seccion-formulario">
+          <form action="#" method="GET" class="formulario-reserva">
+            <fieldset>
+              <legend>Datos Personales</legend>
+              <label for="nombre">Nombre completo:</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                placeholder="Ej: Juan Pérez"
+              />
 
-  <main class="contenedor-contacto">
-    <h2 class="titulo-seccion titulo-centro">Reserva tu Aventura</h2>
-    <div class="columnas-contacto">
+              <label for="email">Correo electrónico:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="ejemplo@correo.com"
+              />
 
-    <section class="seccion-formulario">
-      <form action="#" method="POST" class="formulario-reserva">
-        <fieldset>
-          <legend>Datos Personales</legend>
-          <label for="nombre">Nombre completo:</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+              <label for="telefono">Teléfono:</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+56 9 1234 5678"
+              />
+            </fieldset>
 
-          <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            <fieldset>
+              <legend>Detalles de la Reserva</legend>
 
-          <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
-        </fieldset>
+              <label>Tipo de reserva:</label>
+              <div class="opciones-reserva">
+                <label class="opcion-radio">
+                  <input
+                    type="radio"
+                    id="tipo-ambos"
+                    name="tipo-reserva"
+                    value="ambos"
+                    checked
+                  />
+                  <span>Alojamiento y Panorama</span>
+                </label>
+                <label class="opcion-radio">
+                  <input
+                    type="radio"
+                    id="tipo-panorama"
+                    name="tipo-reserva"
+                    value="panorama"
+                  />
+                  <span>Solo Panorama</span>
+                </label>
+                <label class="opcion-radio">
+                  <input
+                    type="radio"
+                    id="tipo-hotel"
+                    name="tipo-reserva"
+                    value="hotel"
+                  />
+                  <span>Solo Alojamiento</span>
+                </label>
+              </div>
 
-        <fieldset>
-          <legend>Detalles de la Reserva</legend>
-          
-          <label>Tipo de reserva:</label>
-          <div class="opciones-reserva">
-            <label class="opcion-radio">
-              <input type="radio" id="tipo-ambos" name="tipo-reserva" value="ambos" checked>
-              <span>Alojamiento y Panorama</span>
-            </label>
-            <label class="opcion-radio">
-              <input type="radio" id="tipo-panorama" name="tipo-reserva" value="panorama">
-              <span>Solo Panorama</span>
-            </label>
-            <label class="opcion-radio">
-              <input type="radio" id="tipo-hotel" name="tipo-reserva" value="hotel">
-              <span>Solo Alojamiento</span>
-            </label>
+              <div id="grupo-panorama">
+                <label for="panorama">Selecciona un Panorama:</label>
+                <select id="panorama" name="panorama">
+                  <option value="0" data-precio="0">-- Ninguno --</option>
+                  <option value="trekking" data-precio="40000">
+                    Trekking al Glaciar ($40.000 p/p)
+                  </option>
+                  <option value="esqui" data-precio="50000">
+                    Día de Nieve y Esquí ($50.000 p/p)
+                  </option>
+                  <option value="termas" data-precio="25000">
+                    Termas Naturales ($25.000 p/p)
+                  </option>
+                  <option value="cabalgata" data-precio="30000">
+                    Cabalgata con Arrieros ($30.000 p/p)
+                  </option>
+                  <option value="rafting" data-precio="45000">
+                    Rafting Extremo ($45.000 p/p)
+                  </option>
+                  <option value="astroturismo" data-precio="20000">
+                    Astroturismo ($20.000 p/p)
+                  </option>
+                </select>
+              </div>
+
+              <div id="grupo-hotel">
+                <label for="hotel">Selecciona un Alojamiento:</label>
+                <select id="hotel" name="hotel">
+                  <option value="0" data-precio="0">-- Ninguno --</option>
+                  <option value="hotel" data-precio="80000">
+                    Hotel Cordillera ($80.000 p/p por noche)
+                  </option>
+                  <option value="cabanas" data-precio="65000">
+                    Cabañas del Bosque ($65.000 p/p por noche)
+                  </option>
+                  <option value="hostal" data-precio="20000">
+                    Hostal Mochileros ($20.000 p/p por noche)
+                  </option>
+                </select>
+              </div>
+
+              <label for="fecha">Fecha estimada de viaje:</label>
+              <input type="date" id="fecha" name="fecha" />
+
+              <label for="personas">Número de personas:</label>
+              <input
+                type="number"
+                id="personas"
+                name="personas"
+                min="1"
+                max="20"
+                value="1"
+              />
+
+              <div class="caja-resumen">
+                <p class="resumen-titulo">
+                  <strong>Cotización de Reserva</strong>
+                </p>
+                <div class="resumen-detalle">
+                  <p>
+                    Al enviar esta solicitud, nuestro equipo confirmará
+                    disponibilidad y le enviará el valor total detallado a su
+                    correo electrónico.
+                  </p>
+                </div>
+              </div>
+
+              <label for="mensaje">Mensaje adicional:</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="Escribe aquí tus dudas o requerimientos especiales..."
+              ></textarea>
+            </fieldset>
+
+            <button type="submit" class="boton-enviar">Enviar Solicitud</button>
+          </form>
+        </section>
+
+        <section class="seccion-info-contacto">
+          <h3>Datos de Contacto</h3>
+          <p>
+            <strong>Dirección:</strong> Av. Principal 123, Destino Cordillera
+          </p>
+          <p><strong>Teléfono:</strong> +56 2 2345 6789</p>
+          <p><strong>Email:</strong> contacto@destinocordillera.cl</p>
+          <p>
+            <strong>Horario de atención:</strong> Lunes a Domingo, 09:00 a 18:00
+            hrs.
+          </p>
+
+          <h3>Ubicación</h3>
+          <div class="mapa-referencial">
+            <!-- Mapa simulado con imagen -->
+            <img
+              src="img/recursos/ubicacion.png"
+              alt="Mapa de ubicación Destino Cordillera"
+              style="width: 100%; border-radius: 8px"
+            />
           </div>
-
-          <div id="grupo-panorama">
-            <label for="panorama">Selecciona un Panorama:</label>
-            <select id="panorama" name="panorama">
-              <option value="0" data-precio="0">-- Ninguno --</option>
-              <option value="trekking" data-precio="40000">Trekking al Glaciar ($40.000 p/p)</option>
-              <option value="esqui" data-precio="50000">Día de Nieve y Esquí ($50.000 p/p)</option>
-              <option value="termas" data-precio="25000">Termas Naturales ($25.000 p/p)</option>
-              <option value="cabalgata" data-precio="30000">Cabalgata con Arrieros ($30.000 p/p)</option>
-              <option value="rafting" data-precio="45000">Rafting Extremo ($45.000 p/p)</option>
-              <option value="astroturismo" data-precio="20000">Astroturismo ($20.000 p/p)</option>
-            </select>
-          </div>
-
-          <div id="grupo-hotel">
-            <label for="hotel">Selecciona un Alojamiento:</label>
-            <select id="hotel" name="hotel">
-              <option value="0" data-precio="0">-- Ninguno --</option>
-              <option value="hotel" data-precio="80000">Hotel Cordillera ($80.000 p/p por noche)</option>
-              <option value="cabanas" data-precio="65000">Cabañas del Bosque ($65.000 p/p por noche)</option>
-              <option value="hostal" data-precio="20000">Hostal Mochileros ($20.000 p/p por noche)</option>
-            </select>
-          </div>
-          
-          <label for="fecha">Fecha estimada de viaje:</label>
-          <input type="date" id="fecha" name="fecha">
-          
-          <label for="personas">Número de personas:</label>
-          <input type="number" id="personas" name="personas" min="1" max="20" value="1">
-          
-          <div class="caja-resumen">
-            <p class="resumen-titulo"><strong>Resumen de Costos Estimados</strong></p>
-            <div class="resumen-detalle">
-              <p>Subtotal: <span>$<span id="calc-subtotal">0</span></span></p>
-              <p>Cargo por servicio (10%): <span>$<span id="calc-servicio">0</span></span></p>
-            </div>
-            <p class="resumen-total">
-              <strong>Total Estimado: <span>$<span id="calc-total">0</span></span></strong>
-            </p>
-          </div>
-
-          <label for="mensaje">Mensaje adicional:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tus dudas o requerimientos especiales..."></textarea>
-        </fieldset>
-        
-        <button type="submit" class="boton-enviar">Enviar Solicitud</button>
-      </form>
-    </section>
-
-    <script>
-      // Lógica de reservas dinámica
-      document.addEventListener('DOMContentLoaded', () => {
-        const radiosTipo = document.querySelectorAll('input[name="tipo-reserva"]');
-        const selectPanorama = document.getElementById('panorama');
-        const selectHotel = document.getElementById('hotel');
-        const inputPersonas = document.getElementById('personas');
-        const grupoPanorama = document.getElementById('grupo-panorama');
-        const grupoHotel = document.getElementById('grupo-hotel');
-        
-        // Elementos de cálculo
-        const subtotalSpan = document.getElementById('calc-subtotal');
-        const servicioSpan = document.getElementById('calc-servicio');
-        const totalSpan = document.getElementById('calc-total');
-
-        // Función para leer parámetros de la URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const panoramaParam = urlParams.get('panorama');
-        
-        // Autoseleccionar panorama si viene en la URL
-        if (panoramaParam) {
-          selectPanorama.value = panoramaParam;
-          document.getElementById('tipo-panorama').checked = true;
-        }
-
-        // Función para calcular el precio total
-        const calcularTotal = () => {
-          let precioPanorama = 0;
-          let precioHotel = 0;
-          const personas = parseInt(inputPersonas.value) || 1;
-          const tipo = document.querySelector('input[name="tipo-reserva"]:checked').value;
-
-          if (tipo === 'ambos' || tipo === 'panorama') {
-            precioPanorama = parseInt(selectPanorama.options[selectPanorama.selectedIndex].getAttribute('data-precio'));
-          }
-          if (tipo === 'ambos' || tipo === 'hotel') {
-            precioHotel = parseInt(selectHotel.options[selectHotel.selectedIndex].getAttribute('data-precio'));
-          }
-
-          const subtotal = (precioPanorama + precioHotel) * personas;
-          const cargoServicio = Math.round(subtotal * 0.10);
-          const total = subtotal + cargoServicio;
-
-          // Mostrar los valores formateados
-          subtotalSpan.textContent = subtotal.toLocaleString('es-CL');
-          servicioSpan.textContent = cargoServicio.toLocaleString('es-CL');
-          totalSpan.textContent = total.toLocaleString('es-CL');
-        };
-
-        // Función para mostrar/ocultar campos según el tipo de reserva
-        const toggleCampos = () => {
-          const tipo = document.querySelector('input[name="tipo-reserva"]:checked').value;
-          
-          if (tipo === 'ambos') {
-            grupoPanorama.style.display = 'block';
-            grupoHotel.style.display = 'block';
-          } else if (tipo === 'panorama') {
-            grupoPanorama.style.display = 'block';
-            grupoHotel.style.display = 'none';
-          } else if (tipo === 'hotel') {
-            grupoPanorama.style.display = 'none';
-            grupoHotel.style.display = 'block';
-          }
-          calcularTotal();
-        };
-
-        // Escuchar eventos de cambio
-        radiosTipo.forEach(radio => radio.addEventListener('change', toggleCampos));
-        selectPanorama.addEventListener('change', calcularTotal);
-        selectHotel.addEventListener('change', calcularTotal);
-        inputPersonas.addEventListener('input', calcularTotal);
-
-        // Inicializar estado
-        toggleCampos();
-      });
-    </script>
-
-    <section class="seccion-info-contacto">
-      <h3>Datos de Contacto</h3>
-      <p><strong>Dirección:</strong> Av. Principal 123, Destino Cordillera</p>
-      <p><strong>Teléfono:</strong> +56 2 2345 6789</p>
-      <p><strong>Email:</strong> contacto@destinocordillera.cl</p>
-      <p><strong>Horario de atención:</strong> Lunes a Domingo, 09:00 a 18:00 hrs.</p>
-
-      <h3>Ubicación</h3>
-      <div class="mapa-referencial">
-        <!-- Mapa simulado con imagen -->
-        <img src="img/recursos/ubicacion.png"
-          alt="Mapa de ubicación Destino Cordillera" style="width: 100%; border-radius: 8px;">
+        </section>
       </div>
-    </section>
-    </div>
-  </main>
+    </main>
 
-  <footer>
-    <p>
-      &copy; 2026 Destino Cordillera - Arquimedes Barraza - Rubén Gorigoitia - Jesus Poturo
-    </p>
-  </footer>
-</body>
-
+    <footer>
+      <p>
+        &copy; 2026 Destino Cordillera - Arquimedes Barraza - Rubén Gorigoitia -
+        Jesus Poturo
+      </p>
+    </footer>
+  </body>
 </html>
