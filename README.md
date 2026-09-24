@@ -31,18 +31,18 @@ Sitio web promocional y plataforma informativa para la comuna turística fictici
 
 ## 4. Instrucciones para Ejecutar y Visualizar el Sitio
 
-el proyecto está construido puramente con HTML y CSS, por lo que no requiere instalaciones externas.
+El proyecto está construido puramente con HTML y CSS, por lo que no requiere instalaciones externas.
 
 1. **Clonar el repositorio**:
 
-   ```bash git clone https://github.com/Rub3n-Gori/destino-cordillera.git
-
-   ```
+`git clone https://github.com/Rub3n-Gori/destino-cordillera.git`
 
 2. **Navegar a la carpeta del proyecto**:
-   cd destino-cordillera
+
+`cd destino-cordillera`
+
 3. **Visualizar el sitio**:
-   Abrir directamente el archivo `index.html` en cualquier navegador web (Chrome, Mozila Firefox, Microsoft Edge, etc).
+   Abrir directamente el archivo `index.html` en cualquier navegador web (Chrome, Mozilla Firefox, Microsoft Edge, etc).
 
 - O bien, ejecutarlo mediante una extensión de servidor local como **Live Server** en Visual Studio Code.
 
